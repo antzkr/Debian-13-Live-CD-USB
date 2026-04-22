@@ -748,7 +748,7 @@ alias bashrc='nano ~/.bashrc'
 alias l='eza --icons -a'
 alias lsl='eza --tree --icons --level=2 -la'
 alias duf='duf --hide-mp /var/log,/var/log.hdd,/run/lock,/run/user/1000'
-alias rsync='grc rsync -r --stats --info=progress2'
+alias rsync='rsync -r --stats --info=progress2'
 EOF
 
     # Set correct permissions
