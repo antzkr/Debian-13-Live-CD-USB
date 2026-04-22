@@ -4,7 +4,7 @@ Version 2.20
 April 2026
 
 
-# Rationale
+# RATIONALE
 This script creates a bootable ISO image of Debian 13 desktop which can be burned to a CD or booted from a USB.
 
 It's designed for secure work in an isolated environment, such as examining malicious code or crypto-currency managment offline. However this script was NOT designed to create an OS for anonymous web-browsing, masking IP locations, deep-web use etc. That is out of scope so I'd recommend using a different OS (hint: use Tails instead).
@@ -19,19 +19,19 @@ To reduce proprietary code risk (hidden nasties), I tried to keep non-opensource
 - Mate
 - XFCE
 
-# Customization
+# CUSTOMIZATION
 After building the iso you have the option to make changes to the filesystem in chroot. Then rebuild again to update the ISO. Please note that you cannot build a multi-user system. If you attempt to do so, you will create a broken franken-build. This Live CD / USB build was designed for a single user only.
 
 The packages installed for each desktop environment were chosen for the best balance in lightweight resource use, convenience, and/or attractive graphical user interface. Sensible defaults are in place but can be easily changed by editing the bash script yourself. Liberal amount of comments have been added to the script so the purpose of each command can be understood clearly. You are welcome to modify the script, and add or delete packages as you wish.
 
 If you wish to do so, you can further harden your custom build. See here for more details: https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html
 
-# System requirements
+
+# SYSTEM REQUIREMENTS
 There are no hard and fast rules regarding hardware requirements but I would suggest using at least a modern computer in the last 15 years:
 
-CPU - 1.5 GHz
-
-RAM - 2 GB
+- CPU - 1.5 GHz
+- RAM - 2 GB
 
 Anything less will make the user experience a real struggle. I would recommend at least 4 GB of RAM (ideally 16 GB) especially if you are going to download files. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so you run it on a 1 GB system, which is ideal for remote or headless servers.
 
@@ -39,31 +39,21 @@ Also note that the build script can only be built from either Debian or Ubuntu-b
 
 # INSTALLATION
 To install, make executable and run script:
-chmod +x livecd-build-script-multi-desktop-github-2.20.sh
 
-sudo ./livecd-build-script-multi-desktop-github-2.20.sh
+chmod +x "livecd-build-script-multi-desktop-github-2.20.sh"
+
+sudo ./"livecd-build-script-multi-desktop-github-2.20.sh"
 
 
 Build ISO is saved to your home directory ($HOME/LIVE_BOOT). SHA256 hash is generated if you want to distribute and check authenticity.
 
 Burn to CD/DVD/USB and boot on your machine. UFEI and legacy BIOS are supported.
 
-# Default settings
-LANGUAGE
-
-US English
-
-LOCALE
-
-en-US
-
-ROOT
-
-disabled
-
-USER
-
-(initalized by user). Sudo enabled.
+# DEFAULT SETTINGS
+- LANGUAGE: US English
+- LOCALE: en-US
+- ROOT: disabled
+- USER: (initalized by user). Sudo enabled.
 
 # INSTALLED SOFTWARE
 List of packages included in the Live CD/USB build. Note different desktop environments will have different package combinations:
@@ -103,7 +93,7 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - libreoffice-calc (office spreadsheet)
 - mousepad (text editor)
 
-# List of firmware drivers included in the LiveCD/USB build:
+# List of firmware drivers included:
 - firmware-ath9k-htc
 - firmware-iwlwifi
 - firmware-realtek
@@ -114,10 +104,8 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - amd64-microcode
 - intel-microcode
 
-# Disclaimer
+# DISCLAIMER
 Please review the Debian 13 LiveCD/USB bootable OS build script carefully. NEVER run a script blindly without understanding what it could do. Don't trust me. Google around to find out more. Research, research, research.
 
 # LEGAL
 Please note I am not responsible or liable for any damages or losses arising from your use or inability to use the script and or software used under this script. You are responsible for your use of this script. If you harm someone or get into a dispute with someone else, I will not be involved.
-
-=========================================
