@@ -60,7 +60,7 @@ echo -e "${CYAN}===================================================${NC}\n"
 env_select () {
 echo -e "\n${YELLOW}Choose target desktop environment for live build:${NC}\n"
 PS3="Option: "
-select DE in "CLI" "KDE" "MATE" "XFCE" "FLUX" "Exit"; do
+select DE in "CLI" "KDE" "MATE" "XFCE" "Exit"; do
     if [[ "$DE" == "Exit" ]]; then
         echo -e "${BLUE}No desktop environment selected. Script will exit here.${NC}\n"
         exit 1
