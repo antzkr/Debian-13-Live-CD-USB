@@ -9,9 +9,9 @@ This script creates a bootable ISO image of Debian 13 desktop which can be burne
 
 It's designed for secure work in an isolated environment, such as examining malicious code or crypto-currency managment offline. However this script was NOT designed to create an OS for anonymous web-browsing, masking IP locations, deep-web use etc. That is out of scope so I'd recommend using a different OS (hint: use Tails instead).
 
-This Live CD/USB bootable OS runs completely from RAM. So files created during a session will not be saved and irreversibly deleted unless moved to a seperate disk. The purpose of this script is for you to build your own custom Live CD/USB bootable OS so you don't have to trust anybody else. You built it so you know what's in it.
+This Live CD/USB bootable OS runs completely from RAM. So files created during a session will not be saved and irreversibly deleted, unless moved to a seperate disk. The purpose of this script is for you to build your own custom Live CD/USB bootable OS so you don't have to trust anybody else's distribution. You built it so you know what's in it.
 
-To reduce proprietary code risk (hidden nasties), I tried to keep non-opensource software to a bare minimum. Unfortunately, building a completely opensource Live CD/USB OS means you probably won't get access to hardware such as wifi, bluetooth, sound, webcam, graphics cards etc so I believe this is the best compromise between useability and security. Debian 13 was chosen for it's rock-solid stability, genuine commitment to opensource philosophy, and no corporate backing (potential backdoors). Ubuntu and it's derivatives (yes, that includes Mint) cannot be trusted.
+To reduce proprietary code risk (hidden nasties), I tried to keep non-opensource software to a bare minimum. Unfortunately, building a completely opensource Live CD/USB OS means you probably won't get access to hardware such as wifi, bluetooth, sound, webcam, graphics cards etc so I believe this is the best compromise between useability and security. Debian 13 was chosen for it's rock-solid stability, genuine commitment to opensource philosophy, and minimal corporate backing (potential backdoors). Ubuntu and it's derivatives (yes, that includes Mint) cannot be trusted.
 
 # Desktop environments available during build process:
 - CLI (no GUI)
@@ -33,7 +33,7 @@ There are no hard and fast rules regarding hardware requirements but I would sug
 - CPU - 1.5 GHz
 - RAM - 2 GB
 
-Anything less will make the user experience a real struggle. I would recommend at least 4 GB of RAM (ideally 16 GB) especially if you are going to download files. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so you run it on a 1 GB system, which is ideal for remote or headless servers.
+Anything less will make the user experience a real struggle. I would recommend at least 4 GB of RAM (ideally 16 GB) especially if you are going to download files. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so you can run it on a 1 GB system, which is ideal for remote or headless servers.
 
 Also note that the build script can only be built from either Debian or Ubuntu-based linux desktop environments. Other linux derivatives such as Arch or Slackware are not supported and build will probably fail.
 
