@@ -66,7 +66,6 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - librewolf (hardened web browser)
 - falkon (lightweight web browser)
 - qtqr (QR code reader and generator)
-- wget (terminal download manager)
 - ufw (terminal firewall)
 - parted (terminal disk partition manager)
 - screen (terminal multiplexer)
