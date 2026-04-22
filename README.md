@@ -1,4 +1,4 @@
-# Debian 13 MATE Live CD/USB bash build script
+# Debian 13 Live CD/USB build bash script
 Version 2.20
 
 April 2026
