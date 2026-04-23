@@ -1,5 +1,5 @@
 # Debian 13 Live CD/USB build bash script
-Version 2.20
+Version 2.21
 
 April 2026
 
