@@ -204,11 +204,14 @@ build_iso () {
     # Directories for live environment files
     mkdir -p $BUILDF/LIVE_BOOT/$DE/{staging/{EFI/BOOT,boot/grub/x86_64-efi,isolinux,live},tmp}
 
-    # Check and remove previous squash & iso, if found
-    shopt -s nullglob  # Prevents unmatched globs from expanding
+	# Enables the nullglob shell option. This ensures that if the wildcard patterns *.iso or *.sha256sum
+	# don't match any files, the resulting arrays (iso_files, sha_files) will be empty instead of
+	# containing the literal pattern string (e.g. *.iso)
+    shopt -s nullglob
     iso_files=( "$BUILDF/LIVE_BOOT/$DE"/*.iso )
     sha_files=( "$BUILDF/LIVE_BOOT/$DE"/*.sha256sum )
 
+    # Check and remove previous squash & iso, if found
     if [[ ${#iso_files[@]} -gt 0 || ${#sha_files[@]} -gt 0 ]]; then
         rm -f "${iso_files[@]}" "${sha_files[@]}" "$BUILDF/LIVE_BOOT/$DE/staging/live/filesystem.squashfs" 2>/dev/null
         echo -e "${BLUE}\nPrevious squash, iso, and/or checksum files deleted.${NC}\n"
