@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# v2.20
+# v2.21
 
 ######################################################################
 # Script to build a bootable live CD / USB using Debian 13 x64 base  #
@@ -183,8 +183,9 @@ apt autoclean -y && apt autoremove -y # Clean up diskspace
 echo > /root/.bash_history
 [ -f /home/${CHRUSER1}/.bash_history ] && echo > /home/${CHRUSER1}/.bash_history
 
-# Ensure locale is generated
-locale-gen en_US.UTF-8
+# Housekeeping
+locale-gen en_US.UTF-8 # Set locale if unset
+rm -rf /tmp/* 2>/dev/null # Clear tmp dir
 EOL
             unmount_vfs # Unmount virtual filesystems
             build_iso # Rebuild iso
@@ -439,7 +440,7 @@ EOF
     #################################
 setup_cli() {
     # Core packages
-    DEBIAN_FRONTEND=noninteractive apt install network-manager sudo nano gnupg zip unzip rar locales firmware-amd-graphics firmware-atheros amd64-microcode firmware-iwlwifi firmware-misc-nonfree firmware-brcm80211 firmware-b43-installer intel-microcode wget exfat-fuse ntfs-3g lvm2 dosfstools mtools duf curl eza htop lm-sensors toilet figlet ssh sshfs parted screen rsync ufw git cryptsetup  -y
+    DEBIAN_FRONTEND=noninteractive apt install network-manager sudo nano gnupg zip unzip rar locales firmware-amd-graphics firmware-atheros amd64-microcode firmware-iwlwifi firmware-misc-nonfree firmware-brcm80211 firmware-b43-installer intel-microcode wget exfat-fuse ntfs-3g lvm2 dosfstools mtools duf curl eza htop lm-sensors toilet figlet ssh sshfs parted screen rsync ufw git cryptsetup command-not-found -y
 
     # Add your custom packages here
     # apt install fail2ban aria2 ... -y
@@ -751,7 +752,7 @@ alias bashrc='nano ~/.bashrc'
 alias l='eza --icons -a'
 alias lsl='eza --tree --icons --level=2 -la'
 alias duf='duf --hide-mp /var/log,/var/log.hdd,/run/lock,/run/user/1000'
-alias rsync='rsync -r --stats --info=progress2'
+alias rsync='rsync -r -a --stats --info=progress2'
 EOF
 
     # Set correct permissions
