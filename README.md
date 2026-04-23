@@ -40,9 +40,9 @@ Also note that the build script can only be built from either Debian or Ubuntu-b
 # INSTALLATION
 To install, make executable and run script on a debian-based linux system:
 
-chmod +x "livecd-build-script-multi-desktop-github-2.20.sh"
+chmod +x "livecd-build-script-multi-desktop-github-2.xx.sh"
 
-sudo ./"livecd-build-script-multi-desktop-github-2.20.sh"
+sudo ./"livecd-build-script-multi-desktop-github-2.xx.sh"
 
 
 Build ISO is saved to your home directory ($HOME/LIVE_BOOT). SHA256 hash is generated if you want to distribute and check authenticity.
