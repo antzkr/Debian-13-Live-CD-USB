@@ -427,7 +427,7 @@ EOF
     fi
 
     # Exit script gracefully if errors encountered
-    trap 'umount /proc 2>/dev/null; umount /sys 2>/dev/null; umount /dev/pts 2>/dev/null; exit' ERR EXIT
+    trap 'umount /proc 2>/dev/null; umount /sys 2>/dev/null; umount /dev/pts 2>/dev/null; umount /dev 2>/dev/null; exit' ERR EXIT
 
     apt update # Update package repositories
 
