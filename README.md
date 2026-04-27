@@ -42,7 +42,7 @@ There are no hard and fast rules regarding hardware requirements but I would sug
 
 Anything less will make the user experience a real struggle. I would recommend at least 4 GB of RAM (ideally 16 GB) especially if you are going to download files. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so you can run it on a 1 GB system, which is ideal for remote or headless servers.
 
-Also note that the build script can only be built from either Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported and build will probably fail.
+Also note that the build script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported and build will probably fail.
 
 # INSTALLATION
 To install, make executable and run script on a debian-based linux system:
