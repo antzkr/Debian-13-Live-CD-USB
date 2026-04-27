@@ -474,7 +474,7 @@ EOF
     ######################
 setup_kde() {
     # Core packages
-    DEBIAN_FRONTEND=noninteractive apt install kde-plasma-desktop plasma-nm sddm sddm-theme-breeze kwin-addons dolphin konsole sudo nano git pipx gnupg dmsetup zip unzip firmware-amd-graphics firmware-ath9k-htc firmware-iwlwifi firmware-realtek firmware-misc-nonfree firmware-brcm80211 firmware-b43-installer intel-microcode locales wget exfat-fuse ntfs-3g cryptsetup dosfstools mtools ufw pwgen duf curl eza aria2 fail2ban htop lm-sensors toilet figlet gocryptfs cryfs ssh sshfs screen rsync qtqr ufw git cryptsetup -y
+    DEBIAN_FRONTEND=noninteractive apt install kde-plasma-desktop plasma-nm sddm sddm-theme-breeze kwin-addons dolphin konsole sudo nano git pipx gnupg dmsetup zip unzip firmware-amd-graphics firmware-ath9k-htc firmware-iwlwifi firmware-realtek firmware-misc-nonfree firmware-brcm80211 firmware-b43-installer intel-microcode locales wget exfat-fuse ntfs-3g cryptsetup dosfstools mtools ufw pwgen duf curl eza htop lm-sensors toilet figlet gocryptfs cryfs ssh sshfs screen rsync qtqr ufw git cryptsetup -y
 
     # Add your custom packages here
     # apt install fail2ban aria2 ... -y
@@ -527,7 +527,7 @@ EOF
     ################
 setup_mate() {
     # Core packages
-    DEBIAN_FRONTEND=noninteractive apt install mate-desktop-environment-core lightdm mate-media pulseaudio pulseaudio-utils alsa-utils network-manager-gnome mate-power-manager upower acpid sudo nano git pipx gnupg dmsetup unrar rar zip unzip firmware-amd-graphics firmware-ath9k-htc firmware-iwlwifi firmware-realtek firmware-misc-nonfree firmware-brcm80211 firmware-b43-installer intel-microcode locales wget exfat-fuse ntfs-3g cryptsetup dosfstools mtools ufw pwgen duf curl eza aria2 fail2ban htop lm-sensors toilet figlet gocryptfs cryfs keepassxc xclip mousepad ssh sshfs screen rsync qtqr ufw git cryptsetup -y
+    DEBIAN_FRONTEND=noninteractive apt install mate-desktop-environment-core lightdm mate-media pulseaudio pulseaudio-utils alsa-utils network-manager-gnome mate-power-manager upower acpid sudo nano git pipx gnupg dmsetup unrar rar zip unzip firmware-amd-graphics firmware-ath9k-htc firmware-iwlwifi firmware-realtek firmware-misc-nonfree firmware-brcm80211 firmware-b43-installer intel-microcode locales wget exfat-fuse ntfs-3g cryptsetup dosfstools mtools ufw pwgen duf curl eza htop lm-sensors toilet figlet gocryptfs cryfs keepassxc xclip mousepad ssh sshfs screen rsync qtqr ufw git cryptsetup -y
 
     # Add your custom packages here
     # apt install fail2ban aria2 ... -y
@@ -579,7 +579,7 @@ EOF
     ################
 setup_xfce() {
     # Core packages
-    DEBIAN_FRONTEND=noninteractive apt install xfce4 xfce4-goodies lightdm sudo nano git pipx gnupg ssh dmsetup unrar rar zip unzip firmware-amd-graphics firmware-ath9k-htc firmware-iwlwifi firmware-realtek firmware-misc-nonfree firmware-brcm80211 firmware-b43-installer intel-microcode locales wget exfat-fuse ntfs-3g cryptsetup dosfstools mtools ufw pwgen duf curl eza aria2 fail2ban htop lm-sensors toilet figlet gocryptfs cryfs keepassxc xclip ssh sshfs screen rsync qtqr ufw git cryptsetup -y
+    DEBIAN_FRONTEND=noninteractive apt install xfce4 xfce4-goodies lightdm network-manager-gnome sudo nano git pipx gnupg ssh dmsetup unrar rar zip unzip firmware-amd-graphics firmware-ath9k-htc firmware-iwlwifi firmware-realtek firmware-misc-nonfree firmware-brcm80211 firmware-b43-installer intel-microcode locales wget exfat-fuse ntfs-3g cryptsetup dosfstools mtools ufw pwgen duf curl eza htop lm-sensors toilet figlet gocryptfs cryfs keepassxc xclip ssh sshfs screen rsync qtqr ufw git cryptsetup -y
 
     # Add your custom packages here
     # apt install fail2ban aria2 ... -y
