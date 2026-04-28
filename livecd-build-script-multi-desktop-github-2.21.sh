@@ -667,8 +667,13 @@ hashed_pass() {
     hashed_pass
 
     # Housekeeping
-    locale-gen en_US.UTF-8 # Set locale if unset
     rm -rf /tmp/* 2>/dev/null # Clear tmp dir
+
+	# Setup locales (default US English)
+    sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+    locale-gen en_US.UTF-8
+    echo 'LANG=en_US.UTF-8' > /etc/default/locale
+    update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANGUAGE=en_US:en
 
     # Fix for /dev/null errors
     rm -f /dev/null
