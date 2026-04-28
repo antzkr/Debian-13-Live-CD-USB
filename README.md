@@ -17,7 +17,7 @@ The idea is for you to build (and customize) your own Live CD/USB bootable OS so
 # RATIONALE
 This Live CD/USB bootable OS build is designed for secure work in an isolated environment, such as examining malicious code or crypto-currency managment offline. However this build was NOT designed to create an OS for anonymous web-browsing, masking IP locations, deep-web use etc. That is out of scope so I'd recommend using a different OS (hint: use Tails instead).
 
-This build runs completely from RAM. So files created during a session will not be saved and be irreversibly deleted, unless they are moved to a seperate disk.
+This build runs completely from RAM. So files created during a session will not be saved and will be irreversibly deleted, unless they are moved to a seperate disk.
 
 To reduce proprietary code risk (or other hidden nasties), I tried to keep non-opensource software to a bare minimum. Unfortunately, building a completely opensource Live CD/USB OS means you probably won't get access to hardware such as wifi, bluetooth, sound, webcam, graphics cards etc so I believe this build is the best compromise between useability and security. Debian 13 as a base was chosen for it's rock-solid stability, genuine commitment to opensource philosophy, huge package availability, and minimal corporate backing (potential backdoors). Ubuntu and it's derivatives (yes, that includes Mint) cannot be trusted.
 
@@ -47,9 +47,9 @@ Also note that the build script can only be built from Debian-based linux deskto
 # INSTALLATION
 To install, make executable and run script on a debian-based linux system:
 
-chmod +x "livecd-build-script-multi-desktop-github-2.xx.sh"
+chmod +x livecd-build-script-multi-desktop-github-2.xx.sh
 
-sudo ./"livecd-build-script-multi-desktop-github-2.xx.sh"
+sudo ./livecd-build-script-multi-desktop-github-2.xx.sh
 
 
 Build ISO is saved to your home directory ($HOME/LIVE_BOOT). SHA256 hash is generated if you want to distribute and check authenticity.
