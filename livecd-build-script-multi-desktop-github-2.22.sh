@@ -749,7 +749,7 @@ n () {
 }
 EOF
 
-    # Uncomment to customize .bash_aliases to your preferences below
+    # Customize .bash_aliases to your preferences below
     cat << 'EOF' > /home/${USER1}/.bash_aliases
 # My aliases
 alias bash_aliases='nano ~/.bash_aliases'
