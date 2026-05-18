@@ -13,7 +13,11 @@ The idea is for you to build (and customize) your own Live CD/USB bootable OS so
 # RATIONALE
 This Live CD/USB bootable OS build is designed for secure work in an isolated environment, such as examining malicious code or crypto-currency managment offline. However this build was NOT designed to create an OS for anonymous web-browsing, masking IP locations, deep-web use etc. That is out of scope so I'd recommend using a different OS (hint: use Tails instead).
 
-Two choices are available at boot-time: TORAM boot and Normal boot. TORAM boot loads the full filesystem into RAM. Normal boot marks the filesystem as read-only and writes changes to RAM. Both methods are secure. Files created during a live session will not be saved and will be irreversibly deleted, unless they are moved to a seperate disk. If your system has less than 8 GB, Normal boot is recommended otherwise runtime space will fill up very quickly. For systems with greater than 8 GB (ideally 16 GB+), TORAM is recommended for significant performance boost.
+Two boot parameters are available in Grub/EFI:
+- TORAM boot [USB can be removed]
+- Normal boot [USB must remain attached]
+
+TORAM boot loads the full filesystem into RAM. Normal boot marks the filesystem as read-only and writes changes to RAM. Both methods are secure. Files created during a live session will not be saved and will be irreversibly deleted, unless they are moved to a seperate disk. For systems with less than 8 GB, Normal boot is recommended otherwise runtime space will fill up very quickly. For systems with greater than 8 GB, TORAM is recommended for significant performance boost.
 
 To reduce proprietary code risk (or other hidden nasties), I tried to keep non-opensource software to a bare minimum. Unfortunately, building a completely opensource Live CD/USB OS means you probably won't get access to hardware such as wifi, bluetooth, sound, webcam, graphics cards etc so I believe this build is the best compromise between useability and security. Debian 13 as a base was chosen for it's rock-solid stability, genuine commitment to opensource philosophy, huge package availability, and minimal corporate backing (potential backdoors). Ubuntu and it's derivatives (yes, that includes Mint) cannot be trusted.
 
@@ -58,7 +62,8 @@ Burn to CD/DVD/USB and boot on your machine. UEFI and legacy BIOS are supported.
 - LANGUAGE: US English
 - LOCALE: en-US
 - ROOT: disabled
-- USER: (initialized by user). Sudo enabled.
+- USERNAME: (initialized by user)
+- PASSWORD: (initialized by user). Sudo enabled.
 
 # INSTALLED SOFTWARE
 List of packages included in the Live CD/USB build. Note different desktop environments will have different package combinations:
