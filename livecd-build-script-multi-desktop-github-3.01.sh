@@ -280,7 +280,7 @@ LABEL linux-toram
   APPEND initrd=/live/initrd boot=live toram toram=filesystem.squashfs quiet splash
 
 LABEL linux-live
-  MENU LABEL ^2. Debian 13 Live - Normal
+  MENU LABEL ^2. Debian 13 Live - NORMAL
   TEXT HELP
   Read-only filesystem and changes loaded to RAM.
   USB drive must remain connected.
@@ -370,7 +370,7 @@ menuentry "Debian 13 Live - TORAM [Removable USB]" --class debian {
     echo "Loading full squashfs into RAM. USB can be removed on successful boot..."
 }
 
-menuentry "Debian 13 Live - Normal Boot [Keep USB]" --class debian {
+menuentry "Debian 13 Live - NORMAL Boot [Keep USB]" --class debian {
     search --no-floppy --set=root --label DEB13-LIVE
     linux ($root)/live/vmlinuz boot=live quiet splash
     initrd ($root)/live/initrd
