@@ -269,7 +269,7 @@ MENU AUTOBOOT Starting in # second{,s}...
 MENU SEPARATOR
 
 LABEL linux-toram
-  MENU LABEL ^1. Debian 13 Live - Load all to RAM
+  MENU LABEL ^1. Debian 13 Live - TORAM
   MENU DEFAULT
   TEXT HELP
   Loads entire system into RAM for best performance.
@@ -363,7 +363,7 @@ set timeout=15
 set default="0"
 set menu_title="Debian 13 Live CD/USB Boot Menu"
 
-menuentry "Debian 13 Live - Load to RAM [Removable USB]" --class debian {
+menuentry "Debian 13 Live - TORAM [Removable USB]" --class debian {
     search --no-floppy --set=root --label DEB13-LIVE
     linux ($root)/live/vmlinuz boot=live toram toram=filesystem.squashfs quiet splash
     initrd ($root)/live/initrd
@@ -391,7 +391,7 @@ submenu "Advanced Options" {
         initrd ($root)/live/initrd
     }
 
-    menuentry "Recovery Console [Live Boot]" {
+    menuentry "Recovery Console [NORMAL Boot]" {
         search --no-floppy --set=root --label DEB13-LIVE
         linux ($root)/live/vmlinuz boot=live single
         initrd ($root)/live/initrd
