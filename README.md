@@ -39,7 +39,7 @@ If you wish to do so, you can further harden your custom build. See here for mor
 There are no hard and fast rules regarding hardware requirements but I would suggest using at least a modern computer in the last 15 years:
 
 - CPU - 1.5 GHz
-- RAM - 4 GB (Normal boot)
+- RAM - 4 GB (NORMAL boot)
 - RAM - 8 GB (TORAM boot)
 
 Anything less will make the user experience a real struggle. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so it's possible to run it on a 1+ GB system via NORMAL boot - achievable for remote or headless servers. Even so, the more RAM the better.
