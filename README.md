@@ -14,8 +14,8 @@ The idea is for you to build (and customize) your own Live CD/USB bootable OS so
 This Live CD/USB bootable OS build is designed for secure work in an isolated environment, such as examining malicious code or crypto-currency managment offline. However this build was NOT designed to create an OS for anonymous web-browsing, masking IP locations, deep-web use etc. That is out of scope so I'd recommend using a different OS (hint: use Tails instead).
 
 Two boot parameters are available in Grub/EFI:
-- TORAM boot [USB can be removed]
-- Normal boot [USB must remain attached]
+- TORAM boot (USB can be removed)
+- Normal boot (USB must remain attached)
 
 TORAM boot loads the full filesystem into RAM. Normal boot marks the filesystem as read-only and writes changes to RAM. Both methods are secure. Files created during a live session will not be saved and will be irreversibly deleted, unless they are moved to a seperate disk. For systems with less than 8 GB, Normal boot is recommended otherwise runtime space will fill up very quickly. For systems with greater than 8 GB, TORAM is recommended for significant performance boost.
 
