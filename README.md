@@ -15,9 +15,9 @@ This Live CD/USB bootable OS build is designed for secure work in an isolated en
 
 Two boot parameters are available in Grub/EFI:
 - TORAM boot (USB can be removed)
-- Normal boot (USB must remain attached)
+- NORMAL boot (USB must remain attached)
 
-TORAM boot loads the full filesystem into RAM. Normal boot marks the filesystem as read-only and writes changes to RAM. Both methods are secure. Files created during a live session will not be saved and will be irreversibly deleted, unless they are moved to a seperate disk. For systems with less than 8 GB, Normal boot is recommended otherwise runtime space will fill up very quickly. For systems with greater than 8 GB, TORAM is recommended for significant performance boost.
+TORAM boot loads the full filesystem into RAM. NORMAL boot marks the filesystem as read-only and writes changes to RAM. Both methods are secure. Files created during a live session will not be saved and will be irreversibly deleted, unless they are moved to a seperate disk. For systems with less than 8 GB, NORMAL boot is recommended otherwise runtime space will fill up very quickly. For systems with greater than 8 GB, TORAM is recommended for significant performance boost.
 
 To reduce proprietary code risk (or other hidden nasties), I tried to keep non-opensource software to a bare minimum. Unfortunately, building a completely opensource Live CD/USB OS means you probably won't get access to hardware such as wifi, bluetooth, sound, webcam, graphics cards etc so I believe this build is the best compromise between useability and security. Debian 13 as a base was chosen for it's rock-solid stability, genuine commitment to opensource philosophy, huge package availability, and minimal corporate backing (potential backdoors). Ubuntu and it's derivatives (yes, that includes Mint) cannot be trusted.
 
@@ -42,7 +42,7 @@ There are no hard and fast rules regarding hardware requirements but I would sug
 - RAM - 4 GB (Normal boot)
 - RAM - 8 GB (TORAM boot)
 
-Anything less will make the user experience a real struggle. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so it's possible to run it on a 1+ GB system via Normal boot - achievable for remote or headless servers. Even so, the more RAM the better.
+Anything less will make the user experience a real struggle. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so it's possible to run it on a 1+ GB system via NORMAL boot - achievable for remote or headless servers. Even so, the more RAM the better.
 
 Also note that the build script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported and build will probably fail.
 
