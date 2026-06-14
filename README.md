@@ -118,7 +118,9 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - intel-microcode
 
 # SCREENSHOTS
-
+![Select screen](Screenshot-3.png)
+![Build screen](Screenshot-4.png)
+![Build complete screen](Screenshot-6.png)
 
 # DISCLAIMER
 Please review the Debian 13 LiveCD/USB bootable OS build script carefully. NEVER run a script blindly without understanding what it could do. Don't trust me. Google around to find out more. Please research, research, research.
