@@ -1,5 +1,9 @@
 # Debian 13 Live CD/USB build bash script
-Version 3.01
+Version 3.02
+
+Changelog:-
+
+Updated DE package lists, changed boot parameters (toram), memory optimization for 8gb systems, corrected execution order (skel-->user/pass-->DE), re-added settings to: bash_aliases & bashrc, added unmount_vfs to exit (after chroot user customizations), add personal folder/files to skel (before user/pass), updated welcome message, added warning/error/success emojis, added Gnome DE, boot menu enhancements, boot_iso function rewrite, disabled laptop lid suspend on cli DE, cosmetic tweaks, added plymouth boot themes, changed menu style, added welcome message countdown timer, added env_updates function & cleaned up logic flow.
 
 
 
@@ -112,6 +116,9 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - firmware-b43-installer
 - amd64-microcode
 - intel-microcode
+
+# SCREENSHOTS
+
 
 # DISCLAIMER
 Please review the Debian 13 LiveCD/USB bootable OS build script carefully. NEVER run a script blindly without understanding what it could do. Don't trust me. Google around to find out more. Please research, research, research.
