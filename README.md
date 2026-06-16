@@ -1,10 +1,10 @@
 # Debian 13 Live CD/USB build bash script
-Version 2.22
+Version 3.02
 
 Changelog:-
 
-April 2026: 
-Public release
+Updated DE package lists, changed boot parameters (toram), memory optimization for 8gb systems, corrected execution order (skel-->user/pass-->DE), re-added settings to: bash_aliases & bashrc, added unmount_vfs to exit (after chroot user customizations), add personal folder/files to skel (before user/pass), updated welcome message, added warning/error/success emojis, added Gnome DE, boot menu enhancements, boot_iso function rewrite, disabled laptop lid suspend on cli DE, cosmetic tweaks, added plymouth boot themes, changed menu style, added welcome message countdown timer, added env_updates function & cleaned up logic flow.
+
 
 
 # PURPOSE
@@ -17,18 +17,23 @@ The idea is for you to build (and customize) your own Live CD/USB bootable OS so
 # RATIONALE
 This Live CD/USB bootable OS build is designed for secure work in an isolated environment, such as examining malicious code or crypto-currency managment offline. However this build was NOT designed to create an OS for anonymous web-browsing, masking IP locations, deep-web use etc. That is out of scope so I'd recommend using a different OS (hint: use Tails instead).
 
-This build runs completely from RAM. So files created during a session will not be saved and will be irreversibly deleted, unless they are moved to a seperate disk.
+Two boot parameters are available in Grub/EFI:
+- TORAM boot (USB can be removed)
+- NORMAL boot (USB must remain attached)
+
+TORAM boot loads the full filesystem into RAM. NORMAL boot marks the filesystem as read-only and writes changes to RAM. Both methods are secure. Files created during a live session will not be saved and will be irreversibly deleted, unless they are moved to a seperate disk. For systems with less than 8 GB, NORMAL boot is recommended otherwise runtime space will fill up very quickly. For systems with greater than 8 GB, TORAM is recommended for significant performance boost.
 
 To reduce proprietary code risk (or other hidden nasties), I tried to keep non-opensource software to a bare minimum. Unfortunately, building a completely opensource Live CD/USB OS means you probably won't get access to hardware such as wifi, bluetooth, sound, webcam, graphics cards etc so I believe this build is the best compromise between useability and security. Debian 13 as a base was chosen for it's rock-solid stability, genuine commitment to opensource philosophy, huge package availability, and minimal corporate backing (potential backdoors). Ubuntu and it's derivatives (yes, that includes Mint) cannot be trusted.
 
 # Desktop environments available during build process:
 - CLI (no GUI)
 - KDE Plasma
+- Gnome
 - Mate
 - XFCE
 
 # CUSTOMIZATION
-After building the iso you have the option to make changes to the filesystem in chroot. Then rebuild again to update the ISO. Please note that you cannot build a multi-user system. If you attempt to do so, you will create a broken franken-build. This Live CD / USB build was designed for a single user only.
+After building the iso you have the option to make changes to the filesystem in chroot. Then rebuild again to update the ISO. Please note that you cannot build a multi-user system. If you attempt to do so, you will create a broken franken-build. This live build was designed for a single user only.
 
 The packages installed for each desktop environment were chosen for the best balance in lightweight resource use, convenience, and/or attractive graphical user interface. Sensible defaults are in place but can be easily changed by editing the bash script yourself. Liberal amount of comments have been added to the script so the purpose of each command can be understood clearly. You are welcome to modify the script, and add or delete packages as you wish.
 
@@ -38,18 +43,19 @@ If you wish to do so, you can further harden your custom build. See here for mor
 There are no hard and fast rules regarding hardware requirements but I would suggest using at least a modern computer in the last 15 years:
 
 - CPU - 1.5 GHz
-- RAM - 2 GB
+- RAM - 4 GB (NORMAL boot)
+- RAM - 8 GB (TORAM boot)
 
-Anything less will make the user experience a real struggle. I would recommend at least 4 GB of RAM (ideally 16 GB) especially if you are going to download files. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so you can run it on a 1 GB system, which is ideal for remote or headless servers.
+Anything less will make the user experience a real struggle. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so it's possible to run it on a 1+ GB system via NORMAL boot - achievable for remote or headless servers. Even so, the more RAM the better.
 
 Also note that the build script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported and build will probably fail.
 
 # INSTALLATION
 To install, make executable and run script on a debian-based linux system:
 
-chmod +x livecd-build-script-multi-desktop-github-2.xx.sh
+chmod +x livecd-build-script-multi-desktop-github-3.xx.sh
 
-sudo ./livecd-build-script-multi-desktop-github-2.xx.sh
+sudo ./livecd-build-script-multi-desktop-github-3.xx.sh
 
 
 Build ISO is saved to your home directory ($HOME/LIVE_BOOT). SHA256 hash is generated if you want to distribute and check authenticity.
@@ -60,7 +66,8 @@ Burn to CD/DVD/USB and boot on your machine. UEFI and legacy BIOS are supported.
 - LANGUAGE: US English
 - LOCALE: en-US
 - ROOT: disabled
-- USER: (initialized by user). Sudo enabled.
+- USERNAME: (initialized by user)
+- PASSWORD: (initialized by user). Sudo enabled.
 
 # INSTALLED SOFTWARE
 List of packages included in the Live CD/USB build. Note different desktop environments will have different package combinations:
@@ -109,6 +116,11 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - firmware-b43-installer
 - amd64-microcode
 - intel-microcode
+
+# SCREENSHOTS
+![Select screen](Screenshot-3.png)
+![Build screen](Screenshot-4.png)
+![Build complete screen](Screenshot-6.png)
 
 # DISCLAIMER
 Please review the Debian 13 LiveCD/USB bootable OS build script carefully. NEVER run a script blindly without understanding what it could do. Don't trust me. Google around to find out more. Please research, research, research.
