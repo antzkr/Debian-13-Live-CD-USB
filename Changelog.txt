@@ -1,0 +1,16 @@
+Debian 13 Live CD / USB bash script
+
+
+Change-log:~
+
+3.02
+Updated DE package lists, corrected execution order (skel-->user/pass-->DE), re-added settings to: bash_aliases & bashrc, disabled laptop lid suspend on cli DE, cosmetic tweaks, added plymouth boot themes, changed menu style, added welcome message countdown timer, added env_updates function & cleaned up logic flow.
+
+3.01
+Changed boot parameters (normal & toram), memory optimization for 8gb or less systems, changed execution order (from DE->user/pass to user/pass->DE), updated bash_aliases & bashrc, added unmount_vfs to exit (after chroot user customizations), created skel, updated welcome message, added warning/error/success emojis, added Gnome DE, boot menu enhancements (legacy & EFI), boot_iso function rewrite.
+
+2.22
+Typos & comment updates.
+
+2.21
+Public release
