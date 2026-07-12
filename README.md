@@ -10,7 +10,7 @@ Just run this bash script, grab a coffee and come back in about 10 mins to a ful
 The idea is for you to build (and customize) your own Live CD/USB bootable OS so you don't have to trust anybody else's distribution. You built it so you know what's in it.
 
 # RATIONALE
-This Live CD/USB bootable OS build is designed for secure work in an isolated environment, such as examining malicious code or crypto-currency managment offline. However this build was NOT designed to create an OS for anonymous web-browsing, masking IP locations, deep-web use etc. That is out of scope so I'd recommend using a different OS (hint: use Tails instead).
+This Live CD/USB bootable OS build is designed for secure work in an isolated environment, such as examining malicious code or crypto-currency managment offline. However this build was NOT designed to create an OS for anonymous web-browsing, deep-web use etc. That is out of scope so I'd recommend using a different OS (hint: use Tails).
 
 Two boot parameters are available in Grub/EFI:
 - TORAM boot (USB can be removed)
@@ -35,7 +35,7 @@ The packages installed for each desktop environment were chosen for the best bal
 If you wish to do so, you can further harden your custom build. See here for more details: https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html
 
 # SYSTEM REQUIREMENTS
-There are no hard and fast rules regarding hardware requirements but I would suggest using at least a modern computer in the last 15 years:
+There are no hard and fast rules regarding hardware requirements but I would suggest these minimum specifications from a modern computer in the last 15 years or so:
 
 - CPU - 1.5 GHz
 - RAM - 4 GB (NORMAL boot)
@@ -43,7 +43,7 @@ There are no hard and fast rules regarding hardware requirements but I would sug
 
 Anything less will make the user experience a real struggle. The exception is if you install the CLI environment. Baseline CLI environment RAM useage on a fresh boot is about 250 MB so it's possible to run it on a 1+ GB system via NORMAL boot - achievable for remote or headless servers. Even so, the more RAM the better.
 
-Also note that the build script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported and build will probably fail.
+Also note that the build script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
 
 # INSTALLATION
 To install, make executable and run script on a debian-based linux system:
