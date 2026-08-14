@@ -54,7 +54,7 @@ To install, make executable and run script on a debian-based linux system:
 
 Build ISO is saved to your home directory ($HOME/LIVE_BOOT). A SHA256 hash is generated if you want to distribute and check authenticity.
 
-Burn to CD/DVD/USB and boot on your machine. UEFI and legacy BIOS are supported.
+Flash to CD/DVD/USB with your favorite imaging tool and boot. UEFI and legacy BIOS are both supported.
 
 # DEFAULT SETTINGS
 - LANGUAGE: US English
