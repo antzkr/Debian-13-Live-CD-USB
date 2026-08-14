@@ -32,7 +32,7 @@ After building the iso you have the option to make changes to the filesystem in 
 
 The packages installed for each desktop environment were chosen for the best balance in lightweight resource use, convenience, and/or attractive graphical user interface. Sensible defaults are in place but can be easily changed by editing the bash script yourself. Liberal amount of comments have been added to the script so the purpose of each command can be understood clearly. You are welcome to modify the script, and add or delete packages as you wish.
 
-If you wish to do so, you can further harden your custom build. See here for more details: https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html
+If you wish to do so, you can further harden your custom build. Please note that hardening the kernel can break some packages (eg. disabling unprivileged user namespaces breaks flatpak). Consider the risk before attempting to harden your build. See here for more details: https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html
 
 # SYSTEM REQUIREMENTS
 There are no hard and fast rules regarding hardware requirements but I would suggest these minimum specifications from a modern computer in the last 15 years or so:
@@ -52,7 +52,7 @@ To install, make executable and run script on a debian-based linux system:
     sudo ./livecd-build-script-multi-desktop-github-3.xx.sh
 
 
-Build ISO is saved to your home directory ($HOME/LIVE_BOOT). SHA256 hash is generated if you want to distribute and check authenticity.
+Build ISO is saved to your home directory ($HOME/LIVE_BOOT). A SHA256 hash is generated if you want to distribute and check authenticity.
 
 Burn to CD/DVD/USB and boot on your machine. UEFI and legacy BIOS are supported.
 
