@@ -1,6 +1,6 @@
 # Debian 13 Live CD/USB build bash script
 
-Version 3.08
+Version 3.11
 
 # PURPOSE
 This script creates a bootable ISO image of a Debian 13 OS which can be burned to a CD or booted from a USB. A 'one-click' solution for those who don't want to bother with complex configurations using the standard live build tools available, like lb build.
@@ -73,7 +73,6 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - brave (feature-rich web browser)
 - librewolf (hardened web browser)
 - falkon (lightweight web browser)
-- qtqr (QR code reader and generator)
 - ufw (terminal firewall)
 - parted (terminal disk partition manager)
 - screen (terminal multiplexer)
