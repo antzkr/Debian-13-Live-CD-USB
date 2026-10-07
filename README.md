@@ -59,7 +59,7 @@ Flash to CD/DVD/USB with your favorite imaging tool and boot. UEFI and legacy BI
 # DEFAULT SETTINGS
 - LANGUAGE: US English
 - LOCALE: en-US
-- ROOT: disabled
+- ROOT: not set
 - USERNAME: (initialized by user)
 - PASSWORD: (initialized by user). Sudo enabled.
 
