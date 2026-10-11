@@ -28,7 +28,7 @@ To reduce proprietary code risk (or other hidden nasties), I tried to keep non-o
 - XFCE
 
 # CUSTOMIZATION
-After building the iso you have the option to make changes to the filesystem in chroot. Then rebuild again to update the ISO. Please note that you cannot build a multi-user system. If you attempt to do so, you will create a broken franken-build. This live build was designed for a single user only.
+After building the iso you have the option to make changes to the filesystem in chroot. Then rebuild again to update the ISO. Please note that you cannot build a multi-user system. If you attempt to do so, you will create a broken franken-build. This live build was designed for **a single user only**.
 
 The packages installed for each desktop environment were chosen for the best balance in lightweight resource use, convenience, and/or attractive graphical user interface. Sensible defaults are in place but can be easily changed by editing the bash script yourself. Liberal amount of comments have been added to the script so the purpose of each command can be understood clearly. You are welcome to modify the script, and add or delete packages as you wish.
 
