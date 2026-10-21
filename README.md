@@ -1,6 +1,6 @@
 # Debian 13 Live CD/USB build bash script
 
-Version 3.12
+Version 3.13
 
 # PURPOSE
 This script creates a bootable ISO image of a Debian 13 OS which can be burned to a CD or booted from a USB. A 'one-click' solution for those who don't want to bother with complex configurations using the standard live build tools available, like lb build.
@@ -98,6 +98,8 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - libreoffice-writer (office writer)
 - libreoffice-calc (office spreadsheet)
 - mousepad (text editor)
+- gnome-decoder (QR code reader/generator)
+- gnome-snapshot (webcam viewer)
 
 # List of firmware drivers included:
 - firmware-ath9k-htc
@@ -106,7 +108,6 @@ List of packages included in the Live CD/USB build. Note different desktop envir
 - firmware-misc-nonfree
 - firmware-atheros
 - firmware-brcm80211
-- firmware-b43-installer
 - amd64-microcode
 - intel-microcode
 
