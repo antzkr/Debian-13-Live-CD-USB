@@ -54,7 +54,7 @@ To install, make executable and run script on a debian-based linux system:
     sudo ./livecd-build-script-multi-desktop-github-3.xx.sh
 
 
-Build ISO is saved to your home directory ($HOME/LIVE_BOOT). You can customize the build directory by changing the LIVE_DIR variable. A SHA256 hash is generated if you want to distribute and check authenticity.
+Build ISO is saved to your home directory ($HOME/LIVE_BOOT). You can customize the build directory by changing the script LIVE_DIR variable. A SHA256 hash is generated if you want to distribute and validate authenticity.
 
 Flash to CD/DVD/USB with your favorite imaging tool and boot. UEFI and legacy BIOS are both supported.
 
