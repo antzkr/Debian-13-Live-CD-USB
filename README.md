@@ -1,6 +1,6 @@
 # Debian 13 Live CD/USB build bash script
 
-Version 3.15
+Version 3.16
 
 # PURPOSE
 This script creates a bootable ISO image of a Debian 13 OS which can be burned to a CD or booted from a USB. A 'one-click' solution for those who don't want to bother with complex configurations using the standard live build tools available, like lb build.
@@ -34,7 +34,7 @@ The packages installed for each desktop environment were chosen for the best bal
 
 Build log is available at /var/log/debian-livecd-build.log (uncomment to activate in script).
 
-If you wish to do so, you can further harden your custom build. Please note that hardening the kernel can break some packages (eg. disabling unprivileged user namespaces breaks flatpak). Consider the risk before attempting to harden your build. See here for more details: https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html
+Kernel hardening has been added to build. Note that strictly hardening the kernel can break some packages (eg. disabling unprivileged user namespaces breaks flatpak). Sensible defaults settings have been added for the widest compatibility. See here for more details: https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html
 
 # SYSTEM REQUIREMENTS
 There are no hard and fast rules regarding hardware requirements but I would suggest these minimum specifications from a modern computer in the last 15 years or so:
