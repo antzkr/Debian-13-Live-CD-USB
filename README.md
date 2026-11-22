@@ -34,7 +34,7 @@ The packages installed for each desktop environment were chosen for the best bal
 
 Build log is available at /var/log/debian-livecd-build.log (uncomment to activate in script).
 
-Kernel hardening has been added to build. Note that strictly hardening the kernel can break some packages (eg. disabling unprivileged user namespaces breaks flatpak). Sensible defaults settings have been added for the widest compatibility. See here for more details: https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html
+Secure kernel boot-time settings (kernel hardening) has been added to build. Note that strictly hardening the kernel can break some packages (eg. disabling unprivileged user namespaces breaks flatpak). Sensible defaults have been added for the widest compatibility but can be easily modified if you wish. See here for more details: https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html
 
 # SYSTEM REQUIREMENTS
 There are no hard and fast rules regarding hardware requirements but I would suggest these minimum specifications from a modern computer in the last 15 years or so:
